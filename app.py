@@ -2,12 +2,6 @@ from flask import Flask, request, jsonify
 import sqlite3
 import os
 
-if __name__ == '__main__':
-    # Render provides a dynamic PORT environment variable; default to 5000 locally
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
-
-
 # Tell Flask to safely serve HTML and JS files from the current directory
 app = Flask(__name__, static_folder='.', static_url_path='')
 
@@ -16,8 +10,6 @@ def serve_index():
     return app.send_static_file('index.html')
 
 # --- Initialize SQLite Database ---
-
-# Initialize SQLite Database
 def init_db():
     conn = sqlite3.connect('quiz.db')
     cursor = conn.cursor()
@@ -94,4 +86,6 @@ def submit_score():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    # Render provides a dynamic PORT environment variable; default to 5000 locally
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
