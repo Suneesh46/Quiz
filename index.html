@@ -13,7 +13,7 @@
         .glass-card { 
             background: rgba(18, 22, 25, 0.85); 
             backdrop-filter: blur(16px); 
-            border: 1px solid rgba(110, 231, 183, 0.15); 
+            border: 1px solid rgb(244, 248, 246); 
             color: #f1f5f9;
         }
 
@@ -27,17 +27,24 @@
                 transform: translate(-50%, 0);
                 opacity: 1;
             }
-            30% { opacity: 0.1; box-shadow: 0 0 2px rgba(20,184,166,0.1); }
-            38% { opacity: 1; box-shadow: 0 0 50px 20px rgba(20,184,166,0.9); }
-            45% { opacity: 0.2; box-shadow: 0 0 5px rgba(20,184,166,0.2); }
-            52% { opacity: 0.8; box-shadow: 0 0 40px 15px rgba(20,184,166,0.6); }
-            60% { opacity: 0.3; box-shadow: 0 0 2px rgba(20,184,166,0.1); }
-            70% { opacity: 1; box-shadow: 0 0 60px 25px rgba(20,184,166,1); }
-            100% { opacity: 1; box-shadow: 0 0 40px 18px rgba(20,184,166,0.7); }
+            30% { opacity: 0.1; box-shadow: 0 0 2px rgb(240, 244, 244); }
+            38% { opacity: 1; box-shadow: 0 0 50px 20px rgba(240, 244, 244); }
+            40% { opacity: 0.2; box-shadow: 0 0 5px rgba(240, 244, 244); }
+            45% { opacity: 0.2; box-shadow: 0 0 5px rgba(240, 244, 244); }
+            52% { opacity: 0.8; box-shadow: 0 0 40px 15px rgba(240, 244, 244); }
+            55% { opacity: 0.2; box-shadow: 0 0 5px rgba(240, 244, 244); }
+            58% { opacity: 0.5; box-shadow: 0 0 20px 10px rgba(240, 244, 244); }
+            60% { opacity: 0.3; box-shadow: 0 0 2px rgba(240, 244, 244); }
+            65% { opacity: 0.9; box-shadow: 0 0 50px 20px rgba(240, 244, 244); }
+            68% { opacity: 0.4; box-shadow: 0 0 5px rgba(240, 244, 244); }
+            70% { opacity: 1; box-shadow: 0 0 60px 25px rgb(240, 244, 244); }
+            72% { opacity: 0.2; box-shadow: 0 0 5px rgba(240, 244, 244); }
+            80% { opacity: 0.8; box-shadow: 0 0 40px 15px rgba(240, 244, 244); }
+            100% { opacity: 1; box-shadow: 0 0 40px 18px rgba(229, 235, 234, 0.978); }
         }
 
         .tubelight-fixture {
-            animation: dropAndFlicker 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            animation: dropAndFlicker 2s ease-in-out forwards;
         }
         
     body { font-family: 'Space Grotesk', sans-serif; }
@@ -45,40 +52,14 @@
     .glass-card { 
         background: rgba(18, 22, 25, 0.85); 
         backdrop-filter: blur(16px); 
-        border: 1px solid rgba(222, 229, 226, 0.83); 
+        border: 1px solid rgba(222, 229, 226, 0.986); 
         color: #f1f5f9;
     }
 
-    /* Authentic Neon Tubelight Flickering Effect */
-    @keyframes neonBlink {
-        0%, 100% {
-            opacity: 1;
-            text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff, 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fff;
-        }
-        5%, 15% {
-            opacity: 0.3;
-            text-shadow: none;
-        }
-        20% {
-            opacity: 1;
-            text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff, 0 0 82px #fff;
-        }
-        22% {
-            opacity: 0.2;
-            text-shadow: none;
-        }
-        30%, 35% {
-            opacity: 1;
-            text-shadow: 0 0 7px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
-        }
-    }
-
-    .animate-neon-blink {
-        animation: neonBlink 2.5s infinite;
-    }
+    
     </style>
 </head>
-<body class="bg-[#0b0e11] text-gray-100 min-h-screen flex flex-col relative overflow-hidden">
+<body class="bg-[#564545] text-gray-100 min-h-screen flex flex-col relative overflow-hidden">
 
     <!-- AMBIENT ICE & TEA BACKGROUND GLOWS -->
     <div class="fixed inset-0 w-full h-full pointer-events-none z-0 flex items-center justify-center">
@@ -99,7 +80,7 @@
                 <!-- Right Fixture Holder -->
                 <div class="absolute right-3 w-2 h-3 bg-gray-800 border border-gray-700 rounded-sm -top-1"></div>
                 <!-- Glowing Tube Bar -->
-                <div class="w-full h-3 bg-gradient-to-r from-teal-100 via-white to-cyan-100 rounded-full shadow-[0_0_40px_18px_rgba(20,184,166,0.7)]"></div>
+                <div class="w-full h-3 bg-gradient-to-r from-white via-white to-cyan-100 rounded-full shadow-[0_0_40px_18px_rgba(20,184,166,0.7)]"></div>
             </div>
 
             <!-- HOME CARD -->
@@ -108,7 +89,7 @@
                 <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white text-center">
                     Make your knowledge <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300">unstoppable.</span>
                 </h1>
-                <p class="text-gray-400 mb-8 text-lg font-medium text-center">Unlock rounds, conquer challenges, and master .</p>
+                <p class="text-gray-400 mb-8 text-lg font-medium text-center">Unlock rounds, conquer challenges, and master your 5th-semester syllabus.</p>
                 <button id="enterArenaBtn" class="block mx-auto bg-teal-500 text-gray-950 px-10 py-4 rounded-xl font-bold text-lg hover:bg-teal-400 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(20,184,166,0.4)] transition-all duration-300">
                     Start Learning &rarr;
                 </button>
