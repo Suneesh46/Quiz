@@ -28,13 +28,13 @@ registerTab.addEventListener('click', () => {
 });
 
 // --- State Variables ---
-/*// Temporary bypass for testing
+/*/ Temporary bypass for testing
 let currentUser = { user_id: 1, username: "Developer" };
 
 window.addEventListener('DOMContentLoaded', () => {
     loadDashboard();
     switchView('dashboardView');
-}); */
+}); */ 
 let currentSubjectName = "";
 let currentBank = [];
 let currentRoundIndex = 0; // 0 for Round 1, 1 for Round 2...
@@ -93,8 +93,8 @@ function loadDashboard() {
             btn.innerHTML = `
                 <div class="absolute -right-10 -top-10 w-32 h-32 bg-gradient-to-br from-teal-500 to-purple-700 rounded-full blur-2xl opacity-20 group-hover:opacity-20 transition"></div>
                 <span class="inline-block bg-slate-900 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest mb-4">THEORY + LAB</span>
-                <strong class="text-2xl block text-snowwhite mb-2">${subject.title}</strong>
-                <p class="text-sm text-snowwhite/60 font-medium">${totalRounds} Rounds Available</p>
+                <strong class="text-2xl block text-white mb-2">${subject.title}</strong>
+                <p class="text-sm text-white/60 font-medium">${totalRounds} Rounds Available</p>
             `;
             btn.onclick = () => showRounds(subject.title, subject.bank);
             grid.appendChild(btn);
@@ -125,14 +125,14 @@ function showRounds(subjectName, bank) {
         if (isUnlocked) {
             btn.className = 'p-6 glass-card rounded-2xl text-left border-teal-200 hover:border-teal-500 hover:shadow-lg hover:-translate-y-1 transition-all group';
             btn.innerHTML = `
-                <strong class="block text-xl text-snowwhite mb-1">Round ${roundNum}</strong>
+                <strong class="block text-xl text-white mb-1">Round ${roundNum}</strong>
                 <span class="text-xs font-bold text-teal-600">UNLOCKED &rarr;</span>
             `;
             btn.onclick = () => startQuiz(i);
         } else {
             btn.className = 'p-6 bg-white/40 border border-white/20 rounded-2xl text-left opacity-60 cursor-not-allowed';
             btn.innerHTML = `
-                <strong class="block text-xl text-snowwhite mb-1">Round ${roundNum}</strong>
+                <strong class="block text-xl text-white mb-1">Round ${roundNum}</strong>
                 <span class="text-xs font-bold text-red-400">&#128274; LOCKED</span>
             `;
         }
